@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manutenções Frota Ypióca</title>
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Importação dos SDKs do Firebase -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+    import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
+
+    // Configuração do Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyDev0G5r5nVmvkhJsyBbugjntHZzAzB2bk",
+      authDomain: "manutencao-yp.firebaseapp.com",
+      databaseURL: "https://manutencao-yp-default-rtdb.firebaseio.com",
+      projectId: "manutencao-yp",
+      storageBucket: "manutencao-yp.firebasestorage.app",
+      messagingSenderId: "835008091904",
+      appId: "1:835008091904:web:67528649148a19922185e5",
+      measurementId: "G-KJ2TVVGMRW"
+    };
+
+    // Inicializar o Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+  </script>
+</head>
+<body>
+  <!-- Tela Inicial -->
+  <div id="tela-inicial">
+    <h1>Manutenções Frota Ypióca</h1>
+    <button onclick="entrarCorretiva()">Manutenção Corretiva</button>
+    <button onclick="entrarPreventiva()">Manutenção Preventiva</button>
+  </div>
+  
+  <!-- Tela de Opções - Manutenção Corretiva -->
+  <div id="tela-opcoes-corretiva" style="display:none;">
+    <h2>Escolha uma opção</h2>
+    <button onclick="mostrarManutencaoPendentes()">Manutenções Pendentes</button>
+    <button onclick="mostrarCadastrarManutencao()">Cadastrar Manutenção</button>
+    <button onclick="voltarParaTelaInicial()">Voltar</button>
+  </div>
+
+  <!-- Manutenções Pendentes -->
+  <div id="manutencao-pendentes" style="display:none;">
+    <h2>Manutenções Pendentes</h2>
+    <div id="placas-pendentes"></div>
+    <button onclick="voltarParaOpcoesCorretiva()">Voltar</button>
+  </div>
+
+  <!-- Cadastrar Manutenção -->
+  <div id="cadastrar-manutencao" style="display:none;">
+    <h2>Cadastro de Manutenção</h2>
+    <div id="placas-cadastro"></div>
+    <button onclick="voltarParaOpcoesCorretiva()">Voltar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

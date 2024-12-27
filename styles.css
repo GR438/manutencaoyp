@@ -1,0 +1,58 @@
+/* Estilos para a interface */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  button {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  .placa-button {
+    margin: 10px;
+    padding: 10px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .placa-button:hover {
+    background-color: #27ae60;
+  }
+  
+  .manutencao-list {
+    margin: 10px;
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+  }
+  
+  .manutencao-button {
+    background-color: #e74c3c;
+  }
+  
+  .manutencao-button:hover {
+    background-color: #c0392b;
+  }
+  
+
